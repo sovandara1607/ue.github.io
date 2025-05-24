@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I Love UE So Much</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="main.js" defer></script>
+<script>
+  function tiramisuAnswer(yes) {
+    const result = document.getElementById('tiramisu-result');
+    result.classList.remove('animate-pulse');
+    result.textContent = yes ? "Yay! We go! 🎉🍰💖" : "We still go 😎🍰✨";
+    result.classList.add('animate-pulse');
+  }
+</script>
+
+
+
+</head>
+
+
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-gradient-to-r from-red-600 to-blue-600 shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-4 py-4">
+      <h1 class="text-2xl font-bold text-white">I ❤️ U So Much</h1>
+      <nav class="space-x-6 text-white font-medium hidden md:block">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="memories.html" class="hover:underline">Memories</a>
+        <a href="gallery.html" class="hover:underline">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+
+<!-- Tiramisu Invite Section (Responsive + Cute + Lovely) -->
+<section class="relative py-16 px-4 bg-gradient-to-br from-pink-100 via-pink-50 to-pink-200 text-center">
+  <div class="max-w-xl mx-auto">
+    <div class="bg-white rounded-3xl shadow-2xl p-6 sm:p-8 border-4 border-pink-200">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-pink-600 mb-4 animate-bounce">🍰 Will you eat tiramisu with me? 💕</h2>
+      <p class="text-base sm:text-lg text-gray-600 mb-6">Just say yes... or say no — either way, it's a date! 😉</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+        <button onclick="tiramisuAnswer(true)"
+          class="bg-pink-500 hover:bg-pink-600 text-white py-3 px-6 rounded-full text-lg font-semibold shadow-lg transform transition hover:scale-105 w-full sm:w-auto">
+          Yes 🥰
+        </button>
+        <button onclick="tiramisuAnswer(false)"
+          class="bg-yellow-400 hover:bg-yellow-500 text-white py-3 px-6 rounded-full text-lg font-semibold shadow-lg transform transition hover:scale-105 w-full sm:w-auto">
+          No 🙈
+        </button>
+      </div>
+      <p id="tiramisu-result"
+        class="mt-6 text-lg sm:text-xl font-bold text-pink-700 transition duration-300 ease-in-out min-h-[2rem]">
+      </p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
